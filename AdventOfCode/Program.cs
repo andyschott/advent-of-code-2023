@@ -1,7 +1,10 @@
 ﻿using AdventOfCode;
+using AdventOfCode.DayTwo;
 
-var puzzle = new DayOne();
+var puzzle = new DayTwoPuzzle();
 
-var result = puzzle.Run(Constants.PuzzleInput);
+var partOne = puzzle.SumOfPossibleGames(Constants.Day2Input);
+var partTwo = puzzle.MinimumCubes(Constants.Day2Input);
 
-Console.WriteLine(result);
+Console.WriteLine($"Part One: {partOne}");
+Console.WriteLine($"Part Two: {partTwo}");

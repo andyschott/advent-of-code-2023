@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode;
 
-public class DayOne : IPuzzle
+public class DayOne
 {
     private readonly static IReadOnlyDictionary<string, int> _numberNameMap =
         new Dictionary<string, int>(StringComparer.InvariantCultureIgnoreCase)
