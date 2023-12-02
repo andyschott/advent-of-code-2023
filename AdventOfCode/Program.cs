@@ -1,4 +1,4 @@
 ﻿using AdventOfCode;
 
-var day = new DayOne();
-day.Run("something");
+var result = DayOneRunner.Run();
+Console.WriteLine(result);
