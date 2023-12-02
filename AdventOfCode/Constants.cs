@@ -1,14 +1,8 @@
 ﻿namespace AdventOfCode;
 
-public static class DayOneRunner
+public static class Constants
 {
-    public static int Run()
-    {
-        var dayOne = new DayOne();
-        return dayOne.Run(Input);
-    }
-
-    private const string Input = @"eightfivesssxxmgthreethreeone1sevenhnz
+    public const string PuzzleInput = @"eightfivesssxxmgthreethreeone1sevenhnz
 hzdlftdtfqfdbxgsix9onetwo13
 29threelgxljfhrjr
 pxvmbjprllmbfpzjxsvhc5
