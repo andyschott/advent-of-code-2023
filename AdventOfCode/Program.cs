@@ -1,4 +1,7 @@
 ﻿using AdventOfCode;
 
-var result = DayOneRunner.Run();
+var puzzle = new DayOne();
+
+var result = puzzle.Run(Constants.PuzzleInput);
+
 Console.WriteLine(result);
