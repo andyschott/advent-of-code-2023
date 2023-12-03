@@ -24,8 +24,6 @@ public class SchematicParser
             }
         }
 
-        var xLen = schematic.GetLength(0);
-        var yLen = schematic.GetLength(1);
         return schematic;
     }
 }
