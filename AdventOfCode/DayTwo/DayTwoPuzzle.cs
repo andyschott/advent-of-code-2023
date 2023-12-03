@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode.DayTwo;
 
-public class DayTwoPuzzle
+public class DayTwoPuzzle : IPuzzle
 {
     private readonly GameParser _parser = new();
 
@@ -12,7 +12,9 @@ public class DayTwoPuzzle
             [CubeColor.Blue] = 14
         };
 
-    public int SumOfPossibleGames(string input)
+    public int Id => 2;
+
+    public int PartOne(string input)
     {
         var games = Parse(input);
 
@@ -22,7 +24,7 @@ public class DayTwoPuzzle
         return result;
     }
 
-    public int MinimumCubes(string input)
+    public int PartTwo(string input)
     {
         var games = Parse(input);
 

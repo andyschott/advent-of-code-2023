@@ -1,14 +1,14 @@
 ﻿using System.Data;
-using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
 
 namespace AdventOfCode.DayThree;
 
-public class DayThreePuzzle
+public class DayThreePuzzle : IPuzzle
 {
     private readonly SchematicParser _parser = new();
 
-    public int PartNumberSum(string input)
+    public int Id => 3;
+
+    public int PartOne(string input)
     {
         var schematic = _parser.Parse(input);
 
@@ -20,7 +20,7 @@ public class DayThreePuzzle
         return partNumbers.Sum();
     }
 
-    public int SumOfGearRatios(string input)
+    public int PartTwo(string input)
     {
         var schematic = _parser.Parse(input);
 

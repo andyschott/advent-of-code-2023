@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode;
 
-public class DayOne
+public class DayOne : IPuzzle
 {
     private readonly static IReadOnlyDictionary<string, int> _numberNameMap =
         new Dictionary<string, int>(StringComparer.InvariantCultureIgnoreCase)
@@ -31,7 +31,12 @@ public class DayOne
         new ParsedNumber([.. "nine"], 9)
     ];
 
-    public int Run(string input)
+    public int Id => 1;
+
+    public int PartOne(string input) => Run(input);
+    public int PartTwo(string input) => Run(input);
+
+    private static int Run(string input)
     {
         var lines = input.Split(Environment.NewLine, StringSplitOptions.TrimEntries);
         var parsed = lines.Select(Parse);

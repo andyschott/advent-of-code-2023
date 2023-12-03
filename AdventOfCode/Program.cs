@@ -1,10 +1,29 @@
-﻿using AdventOfCode;
+﻿using System.CommandLine;
+using AdventOfCode;
 using AdventOfCode.DayThree;
+using AdventOfCode.DayTwo;
 
-var puzzle = new DayThreePuzzle();
+var rootCommand = new RootCommand();
 
-var partOne = puzzle.PartNumberSum(Constants.Day3Input);
-var partTwo = puzzle.SumOfGearRatios(Constants.Day3Input);
+var dayArgument = new Argument<int>(() => DateTime.Now.Day);
+rootCommand.AddArgument(dayArgument);
 
-Console.WriteLine($"Part One: {partOne}");
-Console.WriteLine($"Part Two: {partTwo}");
+var puzzleBinder = new PuzzleBinder(new IPuzzle[]
+{
+    new DayOne(),
+    new DayTwoPuzzle(),
+    new DayThreePuzzle() 
+}, dayArgument);
+
+var inputBinder = new InputBinder(dayArgument);
+
+rootCommand.SetHandler(async (puzzle, input) =>
+{
+    var partOneTask = Task.Run(() => puzzle.PartOne(input));
+    var partTwoTask = Task.Run(() => puzzle.PartTwo(input));
+
+    Console.WriteLine($"Part One: {await partOneTask}");
+    Console.WriteLine($"Part Two: {await partTwoTask}");
+}, puzzleBinder, inputBinder);
+
+rootCommand.Invoke(args);
