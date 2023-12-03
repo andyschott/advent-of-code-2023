@@ -1,10 +1,10 @@
 ﻿using AdventOfCode;
-using AdventOfCode.DayTwo;
+using AdventOfCode.DayThree;
 
-var puzzle = new DayTwoPuzzle();
+var puzzle = new DayThreePuzzle();
 
-var partOne = puzzle.SumOfPossibleGames(Constants.Day2Input);
-var partTwo = puzzle.MinimumCubes(Constants.Day2Input);
+var partOne = puzzle.PartNumberSum(Constants.Day3Input);
+var partTwo = puzzle.SumOfGearRatios(Constants.Day3Input);
 
 Console.WriteLine($"Part One: {partOne}");
 Console.WriteLine($"Part Two: {partTwo}");
