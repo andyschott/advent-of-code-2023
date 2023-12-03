@@ -6,10 +6,7 @@ public class DayThreeTests
 {
     private readonly DayThreePuzzle _puzzle = new();
 
-    [Fact]
-    public void SampleInputWorks()
-    {
-        const string sampleInput = @"467..114..
+        private const string SampleInput = @"467..114..
 ...*......
 ..35..633.
 ......#...
@@ -20,8 +17,19 @@ public class DayThreeTests
 ...$.*....
 .664.598..";
 
-        var sum = _puzzle.PartNumberSum(sampleInput);
+    [Fact]
+    public void SampleInputWorks()
+    {
+        var sum = _puzzle.PartNumberSum(SampleInput);
 
         Assert.Equal(4361, sum);
+    }
+
+    [Fact]
+    public void SumOfGearRatios_SampleInput_Works()
+    {
+        var sum = _puzzle.SumOfGearRatios(SampleInput);
+
+        Assert.Equal(467835, sum);
     }
 }
