@@ -20,7 +20,7 @@ public class DayThreeTests
     [Fact]
     public void SampleInputWorks()
     {
-        var sum = _puzzle.PartNumberSum(SampleInput);
+        var sum = _puzzle.PartOne(SampleInput);
 
         Assert.Equal(4361, sum);
     }
@@ -28,7 +28,7 @@ public class DayThreeTests
     [Fact]
     public void SumOfGearRatios_SampleInput_Works()
     {
-        var sum = _puzzle.SumOfGearRatios(SampleInput);
+        var sum = _puzzle.PartTwo(SampleInput);
 
         Assert.Equal(467835, sum);
     }

@@ -16,7 +16,7 @@ public class DayOneTests
                "treb7uchet"
             });
 
-            var result = _dayOne.Run(sampleInput);
+            var result = _dayOne.PartOne(sampleInput);
 
             Assert.Equal(142, result);
     }
@@ -36,7 +36,7 @@ public class DayOneTests
                 "7pqrstsixteen"
             });
 
-        var result = _dayOne.Run(sampleInput);
+        var result = _dayOne.PartTwo(sampleInput);
 
         Assert.Equal(281, result);
     }
@@ -45,7 +45,7 @@ public class DayOneTests
     [InlineData("4mmbddbxnb", 44)]
     public void FixErrors(string input, int expectedResult)
     {
-        var result = _dayOne.Run(input);
+        var result = _dayOne.PartOne(input);
 
         Assert.Equal(expectedResult, result);
     }

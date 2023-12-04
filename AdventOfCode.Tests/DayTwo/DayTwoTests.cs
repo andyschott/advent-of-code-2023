@@ -18,7 +18,7 @@ public class DayTwoTests
     [Fact]
     public void IsPossible_SampleInputWorks()
     {
-        var result = _dayTwo.SumOfPossibleGames(_sampleInput);
+        var result = _dayTwo.PartOne(_sampleInput);
 
         Assert.Equal(8, result);
     }
@@ -26,7 +26,7 @@ public class DayTwoTests
     [Fact]
     public void MinimumCubes_SampleInputWorks()
     {
-        var result = _dayTwo.MinimumCubes(_sampleInput);
+        var result = _dayTwo.PartTwo(_sampleInput);
 
         Assert.Equal(2286, result);
     }
