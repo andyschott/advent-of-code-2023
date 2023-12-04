@@ -9,7 +9,7 @@ public partial class CardParser
 
     public IEnumerable<Card> Parse(string input)
     {
-        var lines = input.Split(Environment.NewLine);
+        var lines = input.Split(Environment.NewLine, StringSplitOptions.TrimEntries);
         return lines.Select(ParseCard)
             .ToArray();
     }
@@ -31,6 +31,6 @@ public partial class CardParser
             .ToArray();
     }
 
-    [GeneratedRegex(@"Card (?<id>\d+)\: (?<winning>.+) \| (?<numbers>.+)")]
+    [GeneratedRegex(@"Card\s+(?<id>\d+)\: (?<winning>.+) \| (?<numbers>.+)")]
     private static partial Regex CreateCardRegex();
 }
