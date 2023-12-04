@@ -1,5 +1,6 @@
 ﻿using System.CommandLine;
 using AdventOfCode;
+using AdventOfCode.DayFour;
 using AdventOfCode.DayThree;
 using AdventOfCode.DayTwo;
 
@@ -12,7 +13,8 @@ var puzzleBinder = new PuzzleBinder(new IPuzzle[]
 {
     new DayOne(),
     new DayTwoPuzzle(),
-    new DayThreePuzzle() 
+    new DayThreePuzzle() ,
+    new DayFourPuzzle()
 }, dayArgument);
 
 var inputBinder = new InputBinder(dayArgument);
