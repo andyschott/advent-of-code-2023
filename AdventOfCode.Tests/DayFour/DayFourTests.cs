@@ -28,10 +28,18 @@ Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11";
     }
 
     [Fact]
-    public void SampleInputWorks()
+    public void PartOneSampleInputWorks()
     {
         var result = _puzzle.PartOne(SampleInput);
 
         Assert.Equal(13, result);
+    }
+    
+    [Fact]
+    public void PartTwoSampleInputWorks()
+    {
+        var result = _puzzle.PartTwo(SampleInput);
+
+        Assert.Equal(30, result);
     }
 }
